@@ -1,8 +1,15 @@
+// File Handling datatype2.c
+// Please refer datatypes1.c and datatype2.c
+
 #include <stdio.h>
 #include <stdint.h>
 
+#define Drv_LIN extern //using extern Keyword 
+
+Drv_LIN uint8_t Init_LIN(void);  //Creating a function with the help of extern keyword
+
 /* Function Prototype in this file */
-uint8_t abdul(int *a);  
+uint8_t abdul(void);  
 
 
 int main()
@@ -11,14 +18,22 @@ int main()
 
     printf("a value is %d \n", a);  // printing the value in a 
 
+    Init_LIN();
+
+    abdul();
+
 
     return 0;  // no return type 
 }
 
-uint8_t abdul(int *a)  // Assaign a values in function prototype 
+uint8_t abdul()  // Assaign a values in function prototype 
 {
-    scanf("address of a is %d \n", &a); // scaning the address of a 
-    printf("address of a is %d \n", a); // printing the address of a 
+    char *a;
+    a = "abdul";
+
+    printf("Value of a is %d \n", a);
+
+
     
 
 }
